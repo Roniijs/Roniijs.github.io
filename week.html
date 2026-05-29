@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Nedēļa manā dzīvē</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("form-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="week-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="WEEK home">Ronalds<span>.</span></a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Sākums</a>
+        <a href="about.html">Mana rutīna</a>
+        <a class="active" href="week.html" aria-current="page">Nedēļa</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="switch" aria-hidden="true"><span class="switch-dot"></span></span>
+          <span class="toggle-label">Tumšs</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="week-main">
+      <header class="week-heading">
+        <h1>Darba nedēļa</h1>
+        <p>Šeit ir aprakstīta mana darba nedēļa.</p>
+      </header>
+
+      <section class="days-grid" id="days" aria-label="Choose a day to view my routine"></section>
+    </main>
+
+    <dialog class="day-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-heading">
+        <p class="dialog-number" id="dialog-number">Diena 01</p>
+        <button class="dialog-close" type="button" aria-label="Close day details">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19M19 5 5 19"></path></svg>
+        </button>
+        <h2 id="dialog-title">Pirmdiena</h2>
+        <p class="dialog-intro" id="dialog-intro"></p>
+      </div>
+      <div class="routine-list" id="routine-list"></div>
+    </dialog>
+
+    <footer class="site-footer">
+      <article>
+        <h2>Kontakti</h2>
+        <p>ronalds.nikolajevs@inbox.lv</p>
+        <p>Gulbene</p>
+      </article>
+
+      <article>
+        <h2>Universitāte</h2>
+        <p>Latvijas universitāte</p>
+        <p>EZTF Datorikas nodaļa</p>
+      </article>
+
+      <article>
+        <h2>Par mani</h2>
+        <p>Students</p>
+        <p>Atpūšos, mācos vai strādāju pēc universitātes</p>
+      </article>
+    </footer>
+  </body>
+</html>

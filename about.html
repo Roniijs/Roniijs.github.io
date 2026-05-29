@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Par mani</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("form-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="about-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="WEEK home">Ronalds<span>.</span></a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Sākums</a>
+        <a class="active" href="about.html" aria-current="page">Mana rutīna</a>
+        <a href="week.html">Nedēļa</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="switch" aria-hidden="true"><span class="switch-dot"></span></span>
+          <span class="toggle-label">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="about-main">
+      <header class="about-heading">
+        <h1>Mana rutīna</h1>
+        <p>Šeit ir mazs ieskats par manu katras dienas rutīnu.</p>
+      </header>
+
+      <section class="routine-timeline" aria-label="Student day routine overview">
+        <article class="routine-row">
+          <span class="routine-marker" aria-hidden="true">01</span>
+          <div class="routine-panel">
+            <span class="routine-time">No rīta</span>
+            <h2>Gatavojas dienai</h2>
+            <p>Pārbaudu savu grafiku, ieeju e-pasta, iedzeru rīta kafiju.</p>
+          </div>
+        </article>
+
+        <article class="routine-row">
+          <span class="routine-marker" aria-hidden="true">02</span>
+          <div class="routine-panel">
+            <span class="routine-time">Pusdien laiks</span>
+            <h2>Komunikācija</h2>
+            <p>Sazvanos ar vecākiem. Katru dienu cenšos piezvanīt viņiem, lai pastāstītu kā man klājas un uzzinātu kā viņiem klājas.</p>
+          </div>
+        </article>
+
+        <article class="routine-row">
+          <span class="routine-marker" aria-hidden="true">03</span>
+          <div class="routine-panel">
+            <span class="routine-time">Vakars</span>
+            <h2>Atpūta vai mācīšanās</h2>
+            <p>Vakarā paskatos kādu seriālu, bet ja ir daudz darbu, tad mācos.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <article>
+        <h2>Kontakti</h2>
+        <p>ronalds.nikolajevs@inbox.lv</p>
+        <p>Gulbene</p>
+      </article>
+
+      <article>
+        <h2>Universitāte</h2>
+        <p>Latvijas universitāte</p>
+        <p>EZTF Datorikas nodaļa</p>
+      </article>
+
+      <article>
+        <h2>Par mani</h2>
+        <p>Students</p>
+        <p>Atpūšos, mācos vai strādāju pēc universitātes</p>
+      </article>
+    </footer>
+  </body>
+</html>
