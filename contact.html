@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Kontakti</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("form-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="contact-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="WEEK home">Ronalds<span>.</span></a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Sākums</a>
+        <a href="about.html">Mana rutīna</a>
+        <a href="week.html">Nedēļa</a>
+        <a href="images.html">Attēli</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="switch" aria-hidden="true"><span class="switch-dot"></span></span>
+          <span class="toggle-label">Tumšs</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="contact-main">
+      <header class="contact-heading">
+        <h1>Sūti man ziņu</h1>
+      </header>
+
+      <section class="contact-layout" aria-label="Contact form and information">
+        <form class="message-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <h2>Ieraksti kaut ko</h2>
+
+          <label for="name">Vārds</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="message">Ziņa</label>
+          <textarea id="message" name="message" rows="7" required></textarea>
+
+          <button class="form-button" type="submit">Sūtīt</button>
+        </form>
+
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <article>
+        <h2>Kontakti</h2>
+        <p>ronalds.nikolajevs@inbox.lv</p>
+        <p>Ronalds Nikolajevs rn23011</p>
+        <p>Gulbene</p>
+      </article>
+
+      <article>
+        <h2>Universitāte</h2>
+        <p>Latvijas universitāte</p>
+        <p>EZTF Datorikas nodaļa</p>
+      </article>
+
+      <article>
+        <h2>Par mani</h2>
+        <p>Students</p>
+        <p>Atpūšos, mācos vai strādāju pēc universitātes</p>
+      </article>
+    </footer>
+  </body>
+</html>

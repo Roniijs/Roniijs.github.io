@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Attēli un apraksti</title>
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem("form-theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="images-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="WEEK home">Ronalds<span>.</span></a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Sākums</a>
+        <a href="about.html">Mana rutīna</a>
+        <a href="week.html">Nedēļa</a>
+        <a class="active" href="images.html" aria-current="page">Attēli</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="switch" aria-hidden="true"><span class="switch-dot"></span></span>
+          <span class="toggle-label">Tumšs</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="images-main">
+      <header class="images-heading">
+        <p class="section-number">Autora attēli</p>
+        <h1>Manas nedēļas attēlu stāsts</h1>
+        <p>
+          Šajā lapā var redzēt manus attēlus, kas nedaudz ilustrē manu dzīvi.
+          Katram attēlam ir apraksts, kas paskaidro tā būtību.
+        </p>
+      </header>
+
+      <section class="photo-stories" aria-label="Image description sections">
+        <article class="photo-story">
+          <img class="photo-image" src="assets/lecture-room.jpeg" alt="Universitātes auditorija lekcijas laikā">
+          <div class="photo-copy">
+            <span class="section-number">Universitāte</span>
+            <h2>Lekcija auditorijā</h2>
+            <p>
+              Šajā attēlā redzama lekcija universitātes auditorijā. Tā labi parāda manu mācību dienas daļu,
+              jo lekcijās klausos pasniedzēja skaidrojumus, pierakstu svarīgāko un mēģinu saprast sarežģītākas tēmas.
+              Auditorijas vide man asociējas ar koncentrēšanos, disciplīnu un brīžiem, kad teorija kļūst par pamatu
+              praktiskiem uzdevumiem.
+            </p>
+          </div>
+        </article>
+
+        <article class="photo-story reverse">
+          <img class="photo-image" src="assets/road-home.jpeg" alt="Ceļš pilsētā skatā no automašīnas">
+          <div class="photo-copy">
+            <span class="section-number">Ceļš</span>
+            <h2>Pārvietošanās ikdienā</h2>
+            <p>
+              Es esmu no Gulbenes, un šeit ir redzams attēls kā es braucu. 
+              Man bieži sanāk braukt no Gulbenes uz Rīgu un no Rīgas uz Gulbeni.
+              Es esmu pieradis pavadīt vismaz 3 stundas ceļā.
+            </p>
+          </div>
+        </article>
+
+        <article class="photo-story">
+          <img class="photo-image" src="assets/formal-event.jpeg" alt="Divi cilvēki svinīgā pasākumā zaļos uzvalkos">
+          <div class="photo-copy">
+            <span class="section-number">Pasākums</span>
+            <h2>Ārpus lekcijām</h2>
+            <p>
+              Pusi no semestra pavadību ārpus studijām strādājot par programmētāju.
+              Ikdienā izstrādāju darbā interneta aplikācijas, bet attēlā redzams, ka atrodos
+              uzņēmuma organizētā pasākumā.
+            </p>
+          </div>
+        </article>
+
+        <article class="photo-story reverse">
+          <img class="photo-image" src="assets/pizza-break.jpeg" alt="Divas picas uz galda kafejnīcā">
+          <div class="photo-copy">
+            <span class="section-number">Atpūta</span>
+            <h2>Pusdienas ārpus mājām</h2>
+            <p>
+              Attēlā redzama pica ko ēdu Pērnavā. Biju aizbraucis uz Pērnavu vienu dienu atpūsties.
+              Šo picu ēdu Pērnavas vecpilsētā. Sākumā gribēju citā vietā ēst vakariņas, bet tur bija daudz tūristu
+              un rinda bija nežēlīgi gara, tāpēc meklēju internetā citu vietu un atrado ļoti labu picēriju.
+            </p>
+          </div>
+        </article>
+
+        <article class="photo-story">
+          <img class="photo-image" src="assets/gaming-evening.jpeg" alt="Spēļu kontrolieris pie datora un PlayStation konsoles">
+          <div class="photo-copy">
+            <span class="section-number">Vakars</span>
+            <h2>Spēles vakarā</h2>
+            <p>
+              Vakarā pēc lekcijām un uzdevumiem man patīk atpūsties pie spēlēm. Šis attēls parāda manu
+              brīvā laika daļu, kad varu uz brīdi nedomāt par universitātes darbiem un vienkārši pārslēgties.
+              Spēles palīdz atslābināties, bet tajā pašā laikā cenšos saglabāt līdzsvaru, lai tās netraucētu mācībām.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <article>
+        <h2>Kontakti</h2>
+        <p>ronalds.nikolajevs@inbox.lv</p>
+        <p>Ronalds Nikolajevs rn23011</p>
+        <p>Gulbene</p>
+      </article>
+
+      <article>
+        <h2>Universitāte</h2>
+        <p>Latvijas universitāte</p>
+        <p>EZTF Datorikas nodaļa</p>
+      </article>
+
+      <article>
+        <h2>Par mani</h2>
+        <p>Students</p>
+        <p>Atpūšos, mācos vai strādāju pēc universitātes</p>
+      </article>
+    </footer>
+  </body>
+</html>
